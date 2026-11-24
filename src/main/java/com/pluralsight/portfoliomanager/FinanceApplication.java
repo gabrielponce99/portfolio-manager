@@ -5,6 +5,7 @@ import com.pluralsight.portfoliomanager.model.House;
 import com.pluralsight.portfoliomanager.model.Jewelry;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class FinanceApplication {
 
@@ -18,5 +19,8 @@ public class FinanceApplication {
         System.out.println(ring.getName() + ": $" + ring.getValue());
 
         // TODO: Workbook 6a p. 30, Part 2
+
     }
+
+
 }

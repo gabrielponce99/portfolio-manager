@@ -10,16 +10,19 @@ public class CreditCard extends Account {
     }
 
     public void charge(BigDecimal amount) {
-        // TODO: a charge adds to what you owe
-
+        BigDecimal newBalance = getBalance().add(amount);
+        setBalance(newBalance);
     }
 
     public void pay(BigDecimal amount) {
-        // TODO: a payment takes away from what you owe
+        BigDecimal newBalance = getBalance().subtract(amount);
+        setBalance(newBalance);
 
     }
 
-    // TODO: override getValue(). Money you owe is worth less than nothing,
-    //       so a credit card's value is its balance as a negative number.
+    @Override
+    public BigDecimal getValue() {
+        return getBalance().negate();
+    }
 
 }
