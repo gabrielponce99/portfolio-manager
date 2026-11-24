@@ -13,6 +13,7 @@ public class FinanceApplication {
         House house = new House("Ranch house", new BigDecimal("325000.00"), 1998, 1850, 3);
         Gold gold = new Gold("Gold coins", new BigDecimal("12000.00"), 5.0);
         Jewelry ring = new Jewelry("Grandma's ring", new BigDecimal("2500.00"), 14.0);
+        CreditCard visa = new CreditCard(1245, "Tami", new BigDecimal("2500"));
 
         System.out.println(house.getName() + ": $" + house.getValue());
         System.out.println(gold.getName() + ": $" + gold.getValue());
@@ -23,7 +24,11 @@ public class FinanceApplication {
         Valuable account2 = new BankAccount(456, "Gary", new BigDecimal("1500"));
 
         account1.deposit(new BigDecimal("100"));
-        account2.getValue().add(new BigDecimal("100")); // Still working on this line of code
+        // account2.deposit(new BigDecimal("100"))
+
+        System.out.println("Transaction: " + visa.getValue());
+        System.out.println(account1.getName() + ": $" + account1.getBalance());
+        System.out.println("Account: $" + account2.getValue());
     }
 
 
