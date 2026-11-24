@@ -22,3 +22,10 @@ account1 can use `deposit()` and `withdraw()` (from `BankAccount`), plus `getAcc
 The only method available for `account2` is `getValue()`, because `account2` is declared as a `Valuable`, and the `Valuable` 
 interface only defines `getValue()`. It doesn't matter that the real object is a `BankAccount`.
 
+- Why making `Portfolio` implement `Valuable` make sense?
+
+It makes sense for `Portfolio` to implement `Valuable` because a portfolio has a value. It already has a `getValue`
+method that returns the total value of everything in it, which is exactly what the `Valuable` interface requires.
+This lets a portfolio hold other portfolios, not just houses, gold and accounts. For example, a "Net worth" 
+portfolio could hold a "Retirement" portfolio and a "Home" portfolio. When you call `getValue()` on the big portfolio, 
+it calls `getValue()` on everything in it, and each inner portfolio adds up its own items, so you get one grand total.
