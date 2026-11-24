@@ -24,7 +24,6 @@ public class FinanceApplication {
         portfolio.add(account1);
         portfolio.add(account2);
         portfolio.add(card);
-        portfolio.add();
 
         System.out.println(house.getName() + ": $" + house.getValue());
         System.out.println(gold.getName() + ": $" + gold.getValue());
@@ -37,5 +36,7 @@ public class FinanceApplication {
         System.out.println(account1.getName() + ": $" + account1.getBalance());
         System.out.println("Account: $" + account2.getValue());
         System.out.println("Total: $" + portfolio.getValue());
+        System.out.println("Most Valuable: $" + portfolio.getMostValuable().getValue());
+        System.out.println("Least Valuable: $" + portfolio.getLeastValuable().getValue());
     }
 }
